@@ -23,9 +23,12 @@ namespace PUXTask
             {
                 MyFolder folder = myFolderStorage;
                 if (folder != null)
+                {
                     TextBox1.Text = folder.Path;
-
-                LbMsg.Text = "Naskenuj adresář";
+                    LbMsg.Text = "Adresář byl načten, pokračuj v detekování změn.";
+                }
+                else
+                    LbMsg.Text = "Naskenuj adresář";
             }
         }
 
@@ -50,17 +53,23 @@ namespace PUXTask
             }
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void SkenujAdresar()
         {
             string path = TextBox1.Text;
+            if (string.IsNullOrEmpty(path))
+            {
+                LbMsg.Text = "Nejdříve zadej cestu k adresáři!";
+                return;
+            }
+
             myFolderStorage = _folderScan.InicialFolderScan(path);
             LbMsg.Text = $"Adresář {myFolderStorage.Path} naskenován, nyní můžeš detekovat změny.";
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+        protected void DetekujZmenyAdresare()
         {
             myFolderStorage = _folderScan.ChangesFolderScan(myFolderStorage, out List<MyFileInfo> newFiles, out List<MyFileInfo> changeFiles, out List<MyFileInfo> deletedFiles);
-            
+
             if (myFolderStorage == null)
             {
                 LbMsg.Text = "Nejdříve naskenuj adresář!";
@@ -83,6 +92,16 @@ namespace PUXTask
             BlDeletedFiles.DataBind();
 
             LbMsg.Text = "Změny detekovány.";
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            SkenujAdresar();
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            DetekujZmenyAdresare();
         }
     }
 }
