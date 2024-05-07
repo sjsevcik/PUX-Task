@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33927.289
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PUXTask", "PUXTask\PUXTask.csproj", "{47E5EE3E-663E-4F78-9745-01B9C9CA5849}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PUXTask.Tests", "PUXTask.Tests\PUXTask.Tests.csproj", "{C6BA770D-D50D-4DE7-98FA-B0C910665787}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47E5EE3E-663E-4F78-9745-01B9C9CA5849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47E5EE3E-663E-4F78-9745-01B9C9CA5849}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47E5EE3E-663E-4F78-9745-01B9C9CA5849}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47E5EE3E-663E-4F78-9745-01B9C9CA5849}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6BA770D-D50D-4DE7-98FA-B0C910665787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6BA770D-D50D-4DE7-98FA-B0C910665787}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6BA770D-D50D-4DE7-98FA-B0C910665787}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6BA770D-D50D-4DE7-98FA-B0C910665787}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3774CE05-94A8-4A01-AED2-76186411FF56}
+	EndGlobalSection
+EndGlobal
